@@ -39,7 +39,18 @@ Mon 16 Jul 17:29:34 UTC 2018
 The default board is `debug`. You can build a different one using:
 
 ```
+make BOARD=crickit
+
 make BOARD=samd09breakout
+
+possible targets ('BOARD='):
+  charLCD
+  crickit
+  debug
+  joyFeather
+  miniTFTWing
+  samd09Breakout
+  TFTShield18
 ```
 
 add `DEBUG=1` to the `make` command to enable UART debug logging. The default UART TX pin is `PA04` and the default baud rate is `115200`. Note that there may not be enough available flash to enable UART debug loggnig on smaller chips such as the SAMD09. Also note that the I2C Slave interface will not be able to accept commands as fast while UART debug logging is enabled and use of the flow control pin is required.

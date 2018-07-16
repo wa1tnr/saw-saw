@@ -1,5 +1,8 @@
+# saw-saw
 
 # Introduction
+
+From the Adafruit upstream source:
 
 Seesaw is an open source microcontroller friend for other chips.
 It provides a variety of capabilities such as UART, ADC, DAC,

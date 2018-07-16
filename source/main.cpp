@@ -151,6 +151,11 @@ int main(void)
 	dap.Start(PRIO_DAP);
 #endif
 
+// ---- last one wins:
+#undef  NEVER_DEFINED_COMMENTED // disable NEOPIXEL handler
+#define NEVER_DEFINED_COMMENTED // enable  NEOPIXEL handler
+// ---- :last one wins
+
 #ifdef NEVER_DEFINED_COMMENTED
 #if CONFIG_NEOPIXEL
 	neopixel.Start(PRIO_NEOPIXEL);

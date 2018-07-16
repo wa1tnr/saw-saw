@@ -151,9 +151,11 @@ int main(void)
 	dap.Start(PRIO_DAP);
 #endif
 
+#ifdef NEVER_DEFINED_COMMENTED
 #if CONFIG_NEOPIXEL
 	neopixel.Start(PRIO_NEOPIXEL);
 #endif
+#endif // #ifdef NEVER_DEFINED_COMMENTED
 	
 	//publish a start request
 	Evt *evt = new SystemStartReq(0);

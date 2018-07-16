@@ -1,8 +1,22 @@
 
 # Introduction
 
-Seesaw is an open source microcontroller friend for other chips. It provides a
-variety of capabilities such as UART, ADC, DAC, extra GPIO, etc. to chips that don't have them.
+Seesaw is an open source microcontroller friend for other chips.
+It provides a variety of capabilities such as UART, ADC, DAC,
+extra GPIO, etc. to chips that don't have them.
+
+# Local Modifications - wa1tnr
+
+Intent is to dismantle Adafruit Seesaw (at least a little) to
+see how it acts as a more generic development platform for the
+Adafruit SAMD21 target boards.
+
+Initial platform is likely to be the Cricket (CPX variant) as it
+is already a proven, capable, ATSAMD21G18A platform (stand-alone).
+
+No current modifications.  Not yet.
+
+Mon 16 Jul 17:29:34 UTC 2018
 
 # Interfacing
 - [Arduino](https://github.com/adafruit/Adafruit_Seesaw)

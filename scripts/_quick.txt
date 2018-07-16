@@ -1,0 +1,10 @@
+# to upload:
+
+ $  _bossac_local.sh  ./build/crickit/seesaw-crickit.bin
+
+ $ cd ~/thisdir # replace with TLD of seesaw source tree (saw-saw)
+
+ $  chmod u+rx ./scripts/_bossac_local.sh  # only needed once
+
+ $ ./scripts/_bossac_local.sh ./build/crickit/seesaw-crickit.bin 
+

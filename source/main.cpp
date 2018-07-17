@@ -139,9 +139,9 @@ int main(void)
 {
     /* Initialize the SAM system */
     SystemInit();
-        board_init();
-        neo_pixel_demo();
-        while(1); // ////////////  trap!  ////////////////
+    board_init();
+    neo_pixel_demo();
+    while(1); // ////////////  trap!  ////////////////
 }
 
 /*      // big comment-out block AA:

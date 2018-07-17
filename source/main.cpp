@@ -12,25 +12,9 @@
 #include "PinMap_local.h"
 
 /*
-#include "qpcpp.h"
-#include "qp_extras.h"
 
-#include "event.h"
-#include "bsp.h"
 
-#include "SeesawConfig.h"
 
-#include "System.h"
-#include "Delegate.h"
-#include "I2CSlave.h"
-#include "AOADC.h"
-#include "AODAC.h"
-#include "AOTimer.h"
-#include "AOInterrupt.h"
-#include "AOSERCOM.h"
-#include "AODAP.h"
-#include "AOTouch.h"
-#include "Neopixel.h"
 */
 
 #include "bsp_gpio.h"

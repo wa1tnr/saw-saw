@@ -1,0 +1,9 @@
+
+ //  [7:36 PM] Dan Halbert: 
+
+ //  not optimize away:
+
+ //      for (volatile int i = 1; i < 2; i++) {
+ //          // nothing
+ //      }
+

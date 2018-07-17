@@ -12,67 +12,6 @@
 #include "bsp_gpio.h"
 #include "bsp_neopix.h"
 
-/*
-using namespace QP;
-
-uint32_t evtPoolSmall[ROUND_UP_DIV_4(EVT_SIZE_SMALL * EVT_COUNT_SMALL)];
-uint32_t evtPoolMedium[ROUND_UP_DIV_4(EVT_SIZE_MEDIUM * EVT_COUNT_MEDIUM)];
-uint32_t evtPoolLarge[ROUND_UP_DIV_4(EVT_SIZE_LARGE * EVT_COUNT_LARGE)];
-QP::QSubscrList subscrSto[MAX_PUB_SIG];
-
-static System sys;
-static Delegate del;
-
-#if CONFIG_I2C_SLAVE
-static I2CSlave i2c( CONFIG_I2C_SLAVE_SERCOM );
-#endif
-
-#if CONFIG_DAC
-static AODAC dac;
-#endif
-
-#if CONFIG_ADC
-static AOADC adc;
-#endif
-
-#if CONFIG_TIMER
-static AOTimer tmr;
-#endif
-
-#if CONFIG_TOUCH
-static AOTouch touch;
-#endif
-
-#if CONFIG_INTERRUPT
-static AOInterrupt interrupt;
-#endif
-
-#if CONFIG_SERCOM0
-static AOSERCOM sercom0( SERCOM0, AO_SERCOM0, 0 );
-#endif
-
-#if CONFIG_SERCOM1
-static AOSERCOM sercom1( SERCOM1, AO_SERCOM1, 1 );
-#endif
-
-#if CONFIG_SERCOM2
-static AOSERCOM sercom2( SERCOM2, AO_SERCOM2, 2 );
-#endif
-
-#if CONFIG_SERCOM5
-static AOSERCOM sercom5( SERCOM5, AO_SERCOM5, 5 );
-#endif
-
-#if CONFIG_DAP
-static AODAP dap;
-#endif
-
-#if CONFIG_NEOPIXEL
-static Neopixel neopixel;
-#endif
-
-*/
-
 void uSec(void) {
     for (volatile int i = 1; i < 2; i++) { // needs calibration
         // nothing

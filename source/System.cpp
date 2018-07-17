@@ -557,8 +557,8 @@ QState System::Conflicted(System * const me, QEvt const * const e) {
             uint32_t color = 0;
             if(me->m_powerSenseLEDState % 2 && me->m_powerSenseLEDState < 12){
                 //        BBRRGG
-                color = 0x090000;    // blue
-                color = 0x090900;    // magenta
+                color = 0x990000;    // blue - very blue
+                // color = 0x090900;    // magenta
                 // color = 0x002000; // factory red
                 // color = 0x000009; // green
                 // color = 0x000900; // red

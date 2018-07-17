@@ -1,3 +1,11 @@
+Tue 17 Jul 00:51:30 UTC 2018
+
+changed to bright (very!) blue on flasher.
+
+Branch of a branch seems the right model for the git
+branch structure, as the commit count is higher in
+(this) sub-branch.
+
 Tue 17 Jul 00:27:42 UTC 2018
 
 Able to modulate the power sense NeoPixel color to any

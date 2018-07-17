@@ -1,3 +1,20 @@
+Tue 17 Jul 03:11:59 UTC 2018
+
+    Several colors showing sequentially, on NeoPixel,
+    after a reset.
+
+    main() ends with a 'while(1)' loop.
+
+     . . .
+
+    Good working demo; modification to main.cpp to
+    allow just this demo code to run.
+
+    .. In practice; no real effort made to remove
+    existing code or hooks -- that gets (somewhat)
+    bypassed, in main().
+
+
 Tue 17 Jul 00:51:30 UTC 2018
 
     changed to bright (very!) blue on flasher.

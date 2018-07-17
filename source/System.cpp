@@ -556,7 +556,12 @@ QState System::Conflicted(System * const me, QEvt const * const e) {
             me->m_powerSenseLEDState = (me->m_powerSenseLEDState + 1) % 30;
             uint32_t color = 0;
             if(me->m_powerSenseLEDState % 2 && me->m_powerSenseLEDState < 12){
-                color = 0x002000;
+                //        BBRRGG
+                color = 0x090000;    // blue
+                color = 0x090900;    // magenta
+                // color = 0x002000; // factory red
+                // color = 0x000009; // green
+                // color = 0x000900; // red
             }
             neopix_show_800k(CONFIG_POWER_SENSE_NEOPIX_PIN, (uint8_t *)&color, 4);
             status = Q_HANDLED();

@@ -7,28 +7,12 @@
  */ 
 
 #include "sam.h"
-// #include "board_init.h"
 #include "local_board_init.h"
 #include "PinMap_local.h"
-
-/*
-
-
-
-*/
-
 #include "bsp_gpio.h"
-
-/*
-#if CONFIG_POWER_SENSE
-#include "bsp_neopix.h"
-#endif
-*/
-
 #include "bsp_neopix.h"
 
 /*
-
 using namespace QP;
 
 uint32_t evtPoolSmall[ROUND_UP_DIV_4(EVT_SIZE_SMALL * EVT_COUNT_SMALL)];

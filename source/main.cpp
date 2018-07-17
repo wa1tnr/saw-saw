@@ -7,8 +7,11 @@
  */ 
 
 #include "sam.h"
-#include "board_init.h"
+// #include "board_init.h"
+#include "local_board_init.h"
+#include "PinMap_local.h"
 
+/*
 #include "qpcpp.h"
 #include "qp_extras.h"
 
@@ -28,11 +31,19 @@
 #include "AODAP.h"
 #include "AOTouch.h"
 #include "Neopixel.h"
+*/
 
 #include "bsp_gpio.h"
+
+/*
 #if CONFIG_POWER_SENSE
 #include "bsp_neopix.h"
 #endif
+*/
+
+#include "bsp_neopix.h"
+
+/*
 
 using namespace QP;
 
@@ -92,6 +103,8 @@ static AODAP dap;
 static Neopixel neopixel;
 #endif
 
+*/
+
 void uSec(void) {
     for (volatile int i = 1; i < 2; i++) { // needs calibration
         // nothing
@@ -122,7 +135,15 @@ void neo_pixel_demo(void) {
     //        BBRRGG
     color = 0x090000;    // blue   //
     to_color();
+
+    color = 0x000000;    // dark //
+    to_color();
+
     wide_timer(); wide_timer(); wide_timer();
+
+    color = 0x001903;    // orange //
+    to_color();
+
     color = 0x090900;    // magenta //
     to_color();
     color = 0x000009;    // green  //
@@ -138,7 +159,6 @@ void neo_pixel_demo(void) {
 int main(void)
 {
     /* Initialize the SAM system */
-    SystemInit();
     board_init();
     neo_pixel_demo();
     while(1); // ////////////  trap!  ////////////////

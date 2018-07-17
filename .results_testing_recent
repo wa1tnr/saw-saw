@@ -1,0 +1,9 @@
+Tue 17 Jul 00:27:42 UTC 2018
+
+Able to modulate the power sense NeoPixel color to any
+desired shade.
+
+Set to magenta, at the moment -- unit will flash 5 times
+when there is a power sense event -- in magenta, this time
+(Factory color is red, here).
+

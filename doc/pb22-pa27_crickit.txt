@@ -1,0 +1,5 @@
+crickit:
+
+  PA27 npx
+  PB22 LED (as with D13 on other boards)
+

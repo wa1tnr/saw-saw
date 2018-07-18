@@ -98,6 +98,12 @@ void blinkfast(void) {
    }
 }
 
+void blinkLEDfast(void) {
+    for(int i = 15; i > 0; i--) {
+        blink_LED();
+    }
+}
+
 void neo_pixel_demo(void) {
     init_neopixels();
 
@@ -130,6 +136,7 @@ void neo_pixel_demo(void) {
 
 void activity_LED_demo(void) {
     init_act_LED();
+    blinkLEDfast();
 }
 
 int main(void)

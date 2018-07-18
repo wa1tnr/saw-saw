@@ -1,0 +1,108 @@
+Script started on Wed 18 Jul 2018 01:28:45 UTC
+  $ pwd
+saw-saw/
+  $ make clean
+rm -rf build
+  $ make
+Building crickit
+echo "Device_Startup/startup_samd21.c"
+Device_Startup/startup_samd21.c
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m0plus -Os -g3 -DSAMD21 -D__SAMD21G18A__ -DBOARD_CRICKIT  -x c -std=gnu99 -c -MD -MP -MF "build/crickit/Device_Startup/startup_samd21.d" -MT"build/crickit/Device_Startup/startup_samd21.d" -MT"build/crickit/Device_Startup/startup_samd21.o" -Wall -Werror  -I. -I./include -I./bsp -I./lib/qp/extras -I./lib/qp/include -I./lib/qp/source -Ilib/qp/ports/arm-cm/qxk/gnu -I./boards/crickit -Ilib/cmsis/CMSIS/Include -Ibuild/crickit -Ilib/samd21/samd21a/include/ Device_Startup/startup_samd21.c -o build/crickit/Device_Startup/startup_samd21.o
+echo "Device_Startup/system_samd21.c"
+Device_Startup/system_samd21.c
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m0plus -Os -g3 -DSAMD21 -D__SAMD21G18A__ -DBOARD_CRICKIT  -x c -std=gnu99 -c -MD -MP -MF "build/crickit/Device_Startup/system_samd21.d" -MT"build/crickit/Device_Startup/system_samd21.d" -MT"build/crickit/Device_Startup/system_samd21.o" -Wall -Werror  -I. -I./include -I./bsp -I./lib/qp/extras -I./lib/qp/include -I./lib/qp/source -Ilib/qp/ports/arm-cm/qxk/gnu -I./boards/crickit -Ilib/cmsis/CMSIS/Include -Ibuild/crickit -Ilib/samd21/samd21a/include/ Device_Startup/system_samd21.c -o build/crickit/Device_Startup/system_samd21.o
+echo "source/main.cpp"
+source/main.cpp
+arm-none-eabi-g++ -mthumb -mcpu=cortex-m0plus -Os -g3 -DSAMD21 -D__SAMD21G18A__ -DBOARD_CRICKIT  -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -c -std=c++11 -MD -MP -MF "build/crickit/source/main.d" -MT"build/crickit/source/main.d" -MT"build/crickit/source/main.o" -Wall -Werror  -I. -I./include -I./bsp -I./lib/qp/extras -I./lib/qp/include -I./lib/qp/source -Ilib/qp/ports/arm-cm/qxk/gnu -I./boards/crickit -Ilib/cmsis/CMSIS/Include -Ibuild/crickit -Ilib/samd21/samd21a/include/ source/main.cpp -o build/crickit/source/main.o
+echo "bsp/bsp_neopix.cpp"
+bsp/bsp_neopix.cpp
+arm-none-eabi-g++ -mthumb -mcpu=cortex-m0plus -Os -g3 -DSAMD21 -D__SAMD21G18A__ -DBOARD_CRICKIT  -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -c -std=c++11 -MD -MP -MF "build/crickit/bsp/bsp_neopix.d" -MT"build/crickit/bsp/bsp_neopix.d" -MT"build/crickit/bsp/bsp_neopix.o" -Wall -Werror  -I. -I./include -I./bsp -I./lib/qp/extras -I./lib/qp/include -I./lib/qp/source -Ilib/qp/ports/arm-cm/qxk/gnu -I./boards/crickit -Ilib/cmsis/CMSIS/Include -Ibuild/crickit -Ilib/samd21/samd21a/include/ bsp/bsp_neopix.cpp -o build/crickit/bsp/bsp_neopix.o
+arm-none-eabi-gcc -Lbuild/crickit -mthumb -mcpu=cortex-m0plus -Os -g3 -DSAMD21 -D__SAMD21G18A__ -DBOARD_CRICKIT  -Wall -Werror -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--warn-unresolved-symbols -save-temps --specs=nano.specs --specs=nosys.specs \
+	 -Tscripts/samd21g18a_flash_with_bootloader.ld \
+	 -Wl,-Map,build/crickit/seesaw-crickit.map -o build/crickit/seesaw-crickit.elf  build/crickit/Device_Startup/startup_samd21.o build/crickit/Device_Startup/system_samd21.o build/crickit/source/main.o build/crickit/bsp/bsp_neopix.o
+arm-none-eabi-objcopy -O binary build/crickit/seesaw-crickit.elf build/crickit/seesaw-crickit.bin
+
+   text	   data	    bss	    dec	    hex	filename
+   1440	      4	   8228	   9672	   25c8	build/crickit/seesaw-crickit.elf
+
+
+
+
+  $ ./scripts/_bossac_local.sh  ./build/crickit/seesaw-crickit.bin 
+Set binary mode
+readWord(addr=0)=0x20002dd8
+readWord(addr=0xe000ed00)=0x410cc601
+readWord(addr=0x41002018)=0x10010305
+version()=v1.1 [Arduino:XYZ] May 14 2018 17:37:22
+chipId=0x10010005
+Connected at 921600 baud
+readWord(addr=0)=0x20002dd8
+readWord(addr=0xe000ed00)=0x410cc601
+readWord(addr=0x41002018)=0x10010305
+Atmel SMART device 0x10010005 found
+write(addr=0x20004000,size=0x34)
+writeWord(addr=0x20004030,value=0x10)
+writeWord(addr=0x20004020,value=0x20008000)
+Device       : ATSAMD21G18A
+readWord(addr=0)=0x20002dd8
+readWord(addr=0xe000ed00)=0x410cc601
+readWord(addr=0x41002018)=0x10010305
+Chip ID      : 10010005
+version()=v1.1 [Arduino:XYZ] May 14 2018 17:37:22
+Version      : v1.1 [Arduino:XYZ] May 14 2018 17:37:22
+Address      : 8192
+Pages        : 3968
+Page Size    : 64 bytes
+Total Size   : 248KB
+Planes       : 1
+Lock Regions : 16
+Locked       : readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+readWord(addr=0x41004020)=0xffff
+none
+readWord(addr=0x41004018)=0
+Security     : false
+Boot Flash   : true
+readWord(addr=0x40000834)=0x7000a
+BOD          : true
+readWord(addr=0x40000834)=0x7000a
+BOR          : true
+Arduino      : FAST_CHIP_ERASE
+Arduino      : FAST_MULTI_PAGE_WRITE
+Arduino      : CAN_CHECKSUM_MEMORY_BUFFER
+Erase flash
+chipErase(addr=0x2000)
+done in 0.842 seconds
+
+Write 1444 bytes to flash (23 pages)
+write(addr=0x20005000,size=0x5c0)
+writeBuffer(scr_addr=0x20005000, dst_addr=0x2000, size=0x5c0)
+[==============================] 100% (23/23 pages)
+done in 0.011 seconds
+
+Verify 1444 bytes of flash with checksum.
+checksumBuffer(start_addr=0x2000, size=0x5a4) = b16
+Verify successful
+done in 0.003 seconds
+CPU reset.
+readWord(addr=0)=0x20002dd8
+readWord(addr=0xe000ed00)=0x410cc601
+readWord(addr=0x41002018)=0x10010305
+writeWord(addr=0xe000ed0c,value=0x5fa0004)
+  $ exit
+exit
+
+Script done on Wed 18 Jul 2018 01:29:56 UTC

@@ -53,6 +53,25 @@ void init_act_LED(void) { // PIN_ACTIVITY_LED
     gpio_init(PORTA, PIN_ACTIVITY_LED, 1); // PA17
 }
 
+/*
+
+bsp/bsp_gpio.h
+
+ 16 inline void gpio_write(int port, int pin, int val) {
+ 17         if(val) PORT->Group[port].OUTSET.reg = (1ul<<pin);
+ 18         else PORT->Group[port].OUTCLR.reg = (1ul<<pin);
+ 19 }
+
+*/
+
+void blink_LED(void) {
+ // gpio_write(int port, int pin, int val)
+    gpio_write(PORTA, PIN_ACTIVITY_LED, 1); // PA17
+    short_timer();
+    gpio_write(PORTA, PIN_ACTIVITY_LED, 0); // PA17
+    short_timer();
+}
+
 uint32_t color = 0;
 
 void to_color(void) {

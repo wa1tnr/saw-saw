@@ -6,16 +6,18 @@ Intent is to dismantle Adafruit Seesaw to see how it
 acts, as a more generic development platform for the
 Adafruit SAMD21 target boards.
 
-Initial platform is the Cricket (CPX variant) as it
-is already a proven, capable, ATSAMD21G18A platform
-(as a stand-alone target board).
+Current platform is Feather M0 Express.  LED on D13
+blinks; onboard NeoPixel blinks.
 
+Initial platform was the Cricket (CPX variant) as it
+was already a proven, capable, ATSAMD21G18A platform
+(as a stand-alone target board).
 
 Not sure how much of the remainder of this README still
 obtains (it's from the upstream source; was edited here,
 somewhat).
 
-Wed 18 Jul 02:07:09 UTC 2018
+Wed 18 Jul 23:20:53 UTC 2018
 
 ## Build
 

@@ -1,3 +1,14 @@
+Wed 18 Jul 23:20:53 UTC 2018
+
+    Feather M0 Express - port complete (not much to it).
+
+    gpio realized.
+
+    The D13 style onboard LED now blinks.
+    The NeoPixel onboard the Feather M0 Express also blinks.
+
+    BOARD=feather_m0_express is the new default target.
+
 Wed 18 Jul 02:07:09 UTC 2018
 
     Program binary upload now ~1500 bytes (compile is

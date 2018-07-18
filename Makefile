@@ -71,7 +71,7 @@ SOBJECTS =
 COBJECTS = $(patsubst %.c,$(BUILD_PATH)/%.o,$(CSOURCES))
 OBJECTS = $(patsubst %.cpp,$(BUILD_PATH)/%.o,$(SOURCES))
 
-NAME=seesaw-$(BOARD)
+NAME=saw-saw-$(BOARD)
 EXECUTABLE=$(BUILD_PATH)/$(NAME).bin
 
 all: dirs $(EXECUTABLE)

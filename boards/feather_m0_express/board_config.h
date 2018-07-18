@@ -6,7 +6,8 @@
 #define CONFIG_USB 0ul
 
 //override default activity led pin
-#define PIN_ACTIVITY_LED (32 + 22) //PB22
+// #define PIN_ACTIVITY_LED (32 + 22) //PB22
+#define PIN_ACTIVITY_LED ( 0 + 17) //PA17 - wild guess that 32 means PB rather than PA
 
 //don't use address pins
 #define CONFIG_NO_ADDR

@@ -38,6 +38,21 @@ void init_neopixels(void) {
     gpio_init(PORTA, CONFIG_POWER_SENSE_NEOPIX_PIN, 1); // 27
 }
 
+/*
+
+bsp/bsp_gpio.h
+
+  6 inline void gpio_init(int port, int pin, int dir) {
+  7         PORT->Group[port].DIRSET.reg = ( (dir & 0x01) <<pin);
+  8         PORT->Group[port].PINCFG[pin].reg=(uint8_t)(PORT_PINCFG_INEN);
+  9 }
+
+*/
+
+void init_act_LED(void) { // PIN_ACTIVITY_LED
+    gpio_init(PORTA, PIN_ACTIVITY_LED, 1); // PA17
+}
+
 uint32_t color = 0;
 
 void to_color(void) {

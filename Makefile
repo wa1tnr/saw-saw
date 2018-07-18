@@ -63,26 +63,7 @@ CSOURCES = Device_Startup/startup_samd09.c \
 	Device_Startup/system_samd09.c
 endif
 
-COMMON_SRC = \
-	lib/qp/source/qep_hsm.cpp \
-	lib/qp/source/qep_msm.cpp \
-	lib/qp/source/qf_act.cpp \
-	lib/qp/source/qf_actq.cpp \
-	lib/qp/source/qf_defer.cpp \
-	lib/qp/source/qf_dyn.cpp \
-	lib/qp/source/qf_mem.cpp \
-	lib/qp/source/qf_ps.cpp \
-	lib/qp/source/qf_qact.cpp \
-	lib/qp/source/qf_qeq.cpp \
-	lib/qp/source/qf_qmact.cpp \
-	lib/qp/source/qf_time.cpp \
-	lib/qp/source/qxk.cpp \
-	lib/qp/source/qxk_mutex.cpp \
-	lib/qp/source/qxk_sema.cpp \
-	lib/qp/source/qxk_xthr.cpp \
-	lib/qp/include/qstamp.cpp \
-	lib/qp/extras/fw_evt.cpp \
-	lib/qp/extras/fw_log.cpp \
+COMMON_SRC =
 
 SOURCES = $(COMMON_SRC) \
 	source/bsp.cpp \

@@ -1,7 +1,10 @@
-// Wed 18 Jul 22:16:10 UTC 2018
+// Wed 18 Jul 23:10:29 UTC 2018
 // main.cpp
 
-// previous timestamp:
+// has working LED (as with D13) and working onboard NeoPixel
+
+// previous timestamps:
+// Wed 18 Jul 22:16:10 UTC 2018
 // Tue 17 Jul 02:58:18 UTC 2018
 
 /* Created: 7/17/2017 3:26:42 PM  * Author : deanm  */

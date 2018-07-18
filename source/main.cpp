@@ -56,9 +56,18 @@ void flicker_npx(void) {
     to_color_st();
 }
 
+void blinkfast(void) {
+   for(int i = 5; i > 0; i--) {
+       flicker_npx();
+   }
+}
 
 void neo_pixel_demo(void) {
     init_neopixels();
+
+    blinkfast();
+    to_color();
+
     //        BBRRGG
     color = 0x090000;    // blue   //
     to_color();

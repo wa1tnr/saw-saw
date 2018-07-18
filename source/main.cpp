@@ -18,6 +18,13 @@ void uSec(void) {
     }
 }
 
+void short_timer(void) { // human blinkie timescale
+    uint32_t on_time  = 2140111222; // it's 2147 something ;)
+    for(on_time = 214011; on_time > 0; on_time--) {
+        uSec();
+    }
+}
+
 void wide_timer(void) { // human blinkie timescale
     uint32_t on_time  = 2140111222; // it's 2147 something ;)
     for(on_time = 2140111; on_time > 0; on_time--) {

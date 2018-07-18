@@ -49,6 +49,14 @@ void to_color_st(void) {
     short_timer();
 }
 
+void flicker_npx(void) {
+    color = 0x090000;    // blue   //
+    to_color_st();
+    color = 0x000000;    // dark //
+    to_color_st();
+}
+
+
 void neo_pixel_demo(void) {
     init_neopixels();
     //        BBRRGG

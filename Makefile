@@ -1,4 +1,5 @@
-BOARD=debug
+# BOARD=debug
+BOARD=crickit
 -include Makefile.user
 include boards/$(BOARD)/board.mk
 CC=arm-none-eabi-gcc
@@ -150,6 +151,7 @@ $(BUILD_PATH)/%.o: %.cpp $(wildcard include/*.h boards/*/*.h)
 
 clean:
 	rm -rf build
-
+# OLD Line 153 
+# OLD Line 153 
 all-boards:
 	for f in `cd boards; ls` ; do "$(MAKE)" BOARD=$$f ; done

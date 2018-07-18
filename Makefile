@@ -50,9 +50,6 @@ ifeq ($(CHIP_FAMILY), SAMD09)
 INCLUDES += -Ilib/samd09/include/
 endif
 
-SSOURCES = \
-	$(QPPORT)/qxk_port.S \
-
 ifeq ($(CHIP_FAMILY), SAMD21)
 CSOURCES = Device_Startup/startup_samd21.c \
 	Device_Startup/system_samd21.c
@@ -88,7 +85,8 @@ SOURCES = $(COMMON_SRC) \
 	bsp/bsp_neopix.cpp \
 	bsp/adafruit_ptc.cpp \
 
-SOBJECTS = $(patsubst %.S,$(BUILD_PATH)/%.o,$(SSOURCES))
+# SOBJECTS = $(patsubst %.S,$(BUILD_PATH)/%.o,$(SSOURCES))
+SOBJECTS =
 COBJECTS = $(patsubst %.c,$(BUILD_PATH)/%.o,$(CSOURCES))
 OBJECTS = $(patsubst %.cpp,$(BUILD_PATH)/%.o,$(SOURCES))
 
@@ -132,7 +130,7 @@ $(BUILD_PATH)/%.o: %.cpp $(wildcard include/*.h boards/*/*.h)
 
 clean:
 	rm -rf build
-# OLD Line 153 
-# OLD Line 153 
+# OLD Line 135 
+# OLD Line 135 
 all-boards:
 	for f in `cd boards; ls` ; do "$(MAKE)" BOARD=$$f ; done

@@ -110,6 +110,9 @@ $(BUILD_PATH)/%.o: %.cpp $(wildcard include/*.h boards/*/*.h)
 	echo "$<"
 	$(CXX) $(CXXFLAGS) $(BLD_EXTA_FLAGS) $(INCLUDES) $< -o $@
 
+install:
+	./scripts/_bossac_local.sh ./build/feather_m0_express/saw-saw-feather_m0_express.bin
+
 clean:
 	rm -rf build
 

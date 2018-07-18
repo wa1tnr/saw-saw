@@ -1,0 +1,5 @@
+This came from micropython (circuitpython variant).
+
+Similar in scope to, for example,
+    saw-saw/scripts/samd21g18a_flash_with_bootloader.ld
+

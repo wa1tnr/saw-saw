@@ -44,6 +44,11 @@ void to_color(void) {
     wide_timer();
 }
 
+void to_color_st(void) {
+    neopix_show_800k(CONFIG_POWER_SENSE_NEOPIX_PIN, (uint8_t *)&color, 4);
+    short_timer();
+}
+
 void neo_pixel_demo(void) {
     init_neopixels();
     //        BBRRGG

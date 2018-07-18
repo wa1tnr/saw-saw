@@ -1,47 +1,36 @@
 # saw-saw
 
-# Introduction
-
-From the Adafruit upstream source:
-
-Seesaw is an open source microcontroller friend for other chips.
-It provides a variety of capabilities such as UART, ADC, DAC,
-extra GPIO, etc. to chips that don't have them.
-
 # Local Modifications - wa1tnr
 
-Intent is to dismantle Adafruit Seesaw (at least a little) to
-see how it acts as a more generic development platform for the
+Intent is to dismantle Adafruit Seesaw to see how it
+acts, as a more generic development platform for the
 Adafruit SAMD21 target boards.
 
-Initial platform is likely to be the Cricket (CPX variant) as it
-is already a proven, capable, ATSAMD21G18A platform (stand-alone).
+Initial platform is the Cricket (CPX variant) as it
+is already a proven, capable, ATSAMD21G18A platform
+(as a stand-alone target board).
 
-No current modifications.  Not yet.
 
-Mon 16 Jul 17:29:34 UTC 2018
+Not sure how much of the remainder of this README still
+obtains (it's from the upstream source; was edited here,
+somewhat).
 
-# Interfacing
-- [Arduino](https://github.com/adafruit/Adafruit_Seesaw)
-- [CircuitPython](https://github.com/adafruit/Adafruit_CircuitPython_seesaw)
-- [Python](https://github.com/adafruit/Adafruit_Python_seesaw)
+Wed 18 Jul 02:07:09 UTC 2018
 
 ## Build
 
 ### Requirements
 
 * `make` and a Unix environment
-* `python` in path
+* `python` in path?
 * `arm-none-eabi-gcc` and `arm-none-eabi-g++` in the path
 
 ### Build commands
 
-The default board is `debug`. You can build a different one using:
+The default board is `crickit`. You can build a different one using:
 
 ```
-make BOARD=crickit
-
-make BOARD=samd09breakout
+make BOARD=debug
 
 possible targets ('BOARD='):
   charLCD
@@ -49,7 +38,6 @@ possible targets ('BOARD='):
   debug
   joyFeather
   miniTFTWing
-  samd09Breakout
   TFTShield18
 ```
 

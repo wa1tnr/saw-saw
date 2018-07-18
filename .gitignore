@@ -1,1 +1,4 @@
+build
 build_date.h
+Makefile_*
+_Makefile_*

@@ -93,9 +93,9 @@ void flicker_npx(void) {
 }
 
 void blinkfast(void) {
-   for(int i = 5; i > 0; i--) {
-       flicker_npx();
-   }
+    for(int i = 5; i > 0; i--) {
+        flicker_npx();
+    }
 }
 
 void blinkLEDfast(void) {
@@ -139,14 +139,10 @@ void activity_LED_demo(void) {
     blinkLEDfast();
 }
 
-int main(void)
-{
-    /* Initialize the SAM system */
-    board_init();
+int main(void) {
+    board_init(); // Initialize the SAM system
     activity_LED_demo();
     neo_pixel_demo();
     while(1); // ////////////  trap!  ////////////////
 }
 
-/*      // big comment-out block AA: 
-*/

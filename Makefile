@@ -1,5 +1,6 @@
 # BOARD=debug
-BOARD=crickit
+# BOARD=crickit
+BOARD=feather_m0_express
 -include Makefile.user
 include boards/$(BOARD)/board.mk
 CC=arm-none-eabi-gcc

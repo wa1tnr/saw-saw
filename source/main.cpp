@@ -128,10 +128,15 @@ void neo_pixel_demo(void) {
     to_color();
 }
 
+void activity_LED_demo(void) {
+    init_act_LED();
+}
+
 int main(void)
 {
     /* Initialize the SAM system */
     board_init();
+    activity_LED_demo();
     neo_pixel_demo();
     while(1); // ////////////  trap!  ////////////////
 }

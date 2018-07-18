@@ -1,10 +1,12 @@
-// Tue 17 Jul 02:58:18 UTC 2018
+// Wed 18 Jul 22:16:10 UTC 2018
 // main.cpp
 
-/*
- * Created: 7/17/2017 3:26:42 PM
- * Author : deanm
- */ 
+// previous timestamp:
+// Tue 17 Jul 02:58:18 UTC 2018
+
+/* Created: 7/17/2017 3:26:42 PM  * Author : deanm  */
+
+/* Many changes: by wa1tnr, July 2018 */
 
 #include "sam.h"
 #include "local_board_init.h"

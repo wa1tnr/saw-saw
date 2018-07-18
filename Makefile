@@ -63,27 +63,8 @@ endif
 COMMON_SRC =
 
 SOURCES = $(COMMON_SRC) \
-	source/bsp.cpp \
-	source/event.cpp \
-	source/AOADC.cpp \
-	source/AODAC.cpp \
-	source/AOTouch.cpp \
-	source/AOInterrupt.cpp \
-	source/AOSERCOM.cpp \
-	source/AOTimer.cpp \
-	source/dap.cpp \
-	source/Delegate.cpp \
-	source/I2CSlave.cpp \
 	source/main.cpp \
-	source/Neopixel.cpp \
-	source/System.cpp \
-	bsp/bsp_adc.cpp \
-	bsp/bsp_gpio.cpp \
-	bsp/bsp_sercom.cpp \
-	bsp/bsp_timer.cpp \
-	bsp/pinmux.cpp \
-	bsp/bsp_neopix.cpp \
-	bsp/adafruit_ptc.cpp \
+	bsp/bsp_neopix.cpp
 
 # SOBJECTS = $(patsubst %.S,$(BUILD_PATH)/%.o,$(SSOURCES))
 SOBJECTS =
@@ -130,7 +111,6 @@ $(BUILD_PATH)/%.o: %.cpp $(wildcard include/*.h boards/*/*.h)
 
 clean:
 	rm -rf build
-# OLD Line 135 
-# OLD Line 135 
+
 all-boards:
 	for f in `cd boards; ls` ; do "$(MAKE)" BOARD=$$f ; done

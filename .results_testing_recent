@@ -1,3 +1,12 @@
+Thu 19 Jul 19:02:42 UTC 2018
+
+    On branch testing-cc-554b - about to make a new branch '-cc-665c'
+
+    cruft directory added.
+
+    Arduino.h compiles (with many cpp directives to disinclude
+    things that aren't available already).
+
 Wed 18 Jul 23:20:53 UTC 2018
 
     Feather M0 Express - port complete (not much to it).

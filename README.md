@@ -1,6 +1,8 @@
 # saw-saw
 
-# Local Modifications - wa1tnr
+# small program - 2k bytes
+
+# modified by wa1tnr
 
 Intent is to dismantle Adafruit Seesaw to see how it
 acts, as a more generic development platform for the
@@ -17,9 +19,14 @@ Not sure how much of the remainder of this README still
 obtains (it's from the upstream source; was edited here,
 somewhat).
 
-Wed 18 Jul 23:20:53 UTC 2018
+Thu 19 Jul 19:02:42 UTC 2018
 
 ## Build
+
+ $ make clean ; make ; make install
+ $ make clean ; make BOARD=feather_m0_express ; make install
+
+Default target is feather_m0_express.
 
 ### Requirements
 

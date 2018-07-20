@@ -1,15 +1,16 @@
-// Wed 18 Jul 23:10:29 UTC 2018
+// Fri 20 Jul 18:23:13 UTC 2018
 // main.cpp
 
-// has working LED (as with D13) and working onboard NeoPixel
-
-// previous timestamps:
-// Wed 18 Jul 22:16:10 UTC 2018
-// Tue 17 Jul 02:58:18 UTC 2018
+// Has working LED (as with D13) and working onboard NeoPixel
 
 /* Created: 7/17/2017 3:26:42 PM  * Author : deanm  */
 
 /* Many changes: by wa1tnr, July 2018 */
+
+// previous timestamps:
+// Fri 20 Jul 03:37:54 UTC 2018
+// Wed 18 Jul 23:10:29 UTC 2018
+// Tue 17 Jul 02:58:18 UTC 2018
 
 #include "sam.h"
 #include "local_board_init.h"
@@ -165,9 +166,7 @@ void ends_in_pulses(void) {
 
 void throw_error(void) {
     while(-1) {
-    //  blinkLEDfast(); // error!
-        blipp(); // test, DELETE
-        short_timer();
+        blinkLEDfast(); // error!
     }
 }
 

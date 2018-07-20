@@ -142,10 +142,18 @@ void activity_LED_demo(void) {
     blinkLEDfast();
 }
 
+void throw_error(void) {
+    while(-1) {
+        blinkLEDfast(); // error!
+    }
+}
+
 int main(void) {
     board_init(); // Initialize the SAM system
     activity_LED_demo();
     neo_pixel_demo();
     while(1); // ////////////  trap!  ////////////////
+
+    throw_error(); // never seen.  error!
 }
 

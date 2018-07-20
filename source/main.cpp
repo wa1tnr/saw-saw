@@ -156,6 +156,13 @@ void blipp(void) {
     dark_npx();
 }
 
+void ends_in_pulses(void) {
+    blipp();
+    for (int i = 5; i > 0; i--) { // observe a rather long pause
+        wide_timer();
+    }
+}
+
 void throw_error(void) {
     while(-1) {
     //  blinkLEDfast(); // error!
@@ -168,7 +175,10 @@ int main(void) {
     board_init(); // Initialize the SAM system
     activity_LED_demo();
     neo_pixel_demo();
-//  while(1); // ////////////  trap!  ////////////////
+    while(-1) { // ////////////  trap!  ////////////////
+                // 1 and -1 are both true - only 0 is false
+        ends_in_pulses();
+    }
 
     throw_error(); // never seen.  error!
 }

@@ -142,9 +142,25 @@ void activity_LED_demo(void) {
     blinkLEDfast();
 }
 
+void dark_npx(void) {
+    color = 0x000000;    // dark //
+    neopix_show_800k(CONFIG_POWER_SENSE_NEOPIX_PIN, (uint8_t *)&color, 4);
+}
+
+void blipp(void) {
+    color = 0x030100;    // dull_blue-magenta //
+    neopix_show_800k(CONFIG_POWER_SENSE_NEOPIX_PIN, (uint8_t *)&color, 4);
+    for (int j = 25333; j > 0; j--) { // special, short time
+        uSec();
+    }
+    dark_npx();
+}
+
 void throw_error(void) {
     while(-1) {
-        blinkLEDfast(); // error!
+    //  blinkLEDfast(); // error!
+        blipp(); // test, DELETE
+        short_timer();
     }
 }
 
@@ -152,7 +168,7 @@ int main(void) {
     board_init(); // Initialize the SAM system
     activity_LED_demo();
     neo_pixel_demo();
-    while(1); // ////////////  trap!  ////////////////
+//  while(1); // ////////////  trap!  ////////////////
 
     throw_error(); // never seen.  error!
 }

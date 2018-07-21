@@ -362,8 +362,8 @@
 
 #define PIN_ADDR_0 16
 #define PIN_ADDR_1 17
-#define PIN_USB_DM 24
-#define PIN_USB_DP 25
+// arduino has this // #define PIN_USB_DM 24
+// arduino has this // #define PIN_USB_DP 25
 
 #define CONFIG_GPIO_MASK (((unsigned long long) 0xFFFFFFFFFFFFFFFF) ^ ( ((uint64_t)CONFIG_USB << PIN_USB_DM) | ((uint64_t)CONFIG_USB << PIN_USB_DP) \
 	    | ((uint64_t)CONFIG_ADDR << PIN_ADDR_0) | ((uint64_t)CONFIG_ADDR << PIN_ADDR_1) | ((uint64_t)CONFIG_ACTIVITY_LED << PIN_ACTIVITY_LED) | ((uint64_t)CONFIG_POWER_SENSE << CONFIG_POWER_SENSE_NEOPIX_PIN) \

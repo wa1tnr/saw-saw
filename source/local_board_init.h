@@ -18,10 +18,11 @@
 */
 
 #include <sam.h>
+#include "variant.h"
 
 /* Master clock frequency */
 #define CPU_FREQUENCY                     (48000000ul)
-#define VARIANT_MCK                       CPU_FREQUENCY
+// arduino has this one // #define VARIANT_MCK                       CPU_FREQUENCY
 
 /* Frequency of the board main oscillator */
 #define VARIANT_MAINOSC                   (32768ul)

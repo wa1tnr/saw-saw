@@ -42,6 +42,8 @@ QPPORT = lib/qp/ports/arm-cm/qxk/gnu
 INCLUDES = -I. -I./include -I./bsp -I./lib/qp/extras -I./lib/qp/include -I./lib/qp/source -I$(QPPORT)
 INCLUDES += -I./boards/$(BOARD) -Ilib/cmsis/CMSIS/Include
 INCLUDES += -I$(BUILD_PATH)
+INCLUDES += -I./arduino15/packages/adafruit/hardware/samd/1.2.1/cores/arduino
+INCLUDES += -I./arduino15/packages/adafruit/hardware/samd/1.2.1/variants/$(BOARD)
 
 ifeq ($(CHIP_FAMILY), SAMD21)
 INCLUDES += -Ilib/samd21/samd21a/include/

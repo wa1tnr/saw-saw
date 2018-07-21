@@ -17,6 +17,7 @@
 #include "PinMap_local.h"
 #include "bsp_gpio.h"
 #include "bsp_neopix.h"
+#include "Arduino.h"
 
 void uSec(void) {
     for (volatile int i = 1; i < 2; i++) { // needs calibration

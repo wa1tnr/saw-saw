@@ -107,8 +107,33 @@ void blinkLEDfast(void) {
     }
 }
 
+void color_magenta(void) {
+    color = 0x090900;    // magenta //
+}
+
+void color_blue(void) {
+    color = 0x090000;    // blue   //
+}
+
+void color_blink(void) {
+    to_color();
+    short_timer();
+}
+
+void quick_npx_demo(void) {
+    for(int i = 5; i > 0; i--) {
+        color_magenta();
+        color_blink();
+	color_blue();
+        color_blink();
+    }
+}
+
 void neo_pixel_demo(void) {
     init_neopixels();
+
+    quick_npx_demo();
+    quick_npx_demo();
 
     blinkfast();
     to_color();

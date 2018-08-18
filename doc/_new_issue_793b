@@ -1,0 +1,13 @@
+Sat Aug 18 10:12:41 UTC 2018
+
+A simple pin toggle produces a 32 kHz pattern on
+the oscilloscope (the oscope reports it as 32 kHz
+and the math looks right).
+
+This is true of each Atmel Start program run, from
+any sources found (circuitpython, and happyday's
+repos, as well as atmel start itself).
+
+Hoping saw-saw already has a better way, or at least
+an indication of how it's done right.
+
